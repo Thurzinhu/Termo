@@ -132,7 +132,8 @@ void print_guess(char *guess, char *answer)
     // setting colors to each letter of guess
     for (int i = 0; i < lenght; i++)
     {
-        int color = 0;
+        int color = 0, key_status = corresponding_letter(guess[i]);
+        
         for (int j = 0; j < lenght; j++)
         {
             // answer contains letter, right position
@@ -140,8 +141,6 @@ void print_guess(char *guess, char *answer)
             {
                 printf(GREEN"%c "RESET, guess[i]);
                 color = 1;
-
-                int key_status = corresponding_letter(guess[i]);
 
                 if (KEY_COLORS[key_status] == 0 || KEY_COLORS[key_status] == 2)
                 {
@@ -156,7 +155,6 @@ void print_guess(char *guess, char *answer)
                 printf(YELLOW"%c "RESET, guess[i]);
                 color = 1;
 
-                int key_status = corresponding_letter(guess[i]);
                 if (KEY_COLORS[key_status] == 0)
                 {
                     KEY_COLORS[key_status] = 2;
@@ -168,8 +166,7 @@ void print_guess(char *guess, char *answer)
         if (!color)
         {
             printf(RED"%c "RESET, guess[i]);
-
-            int key_status = corresponding_letter(guess[i]);
+            
             if (KEY_COLORS[key_status] == 0)
             {
                 KEY_COLORS[key_status] = 3;
