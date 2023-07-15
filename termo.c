@@ -82,6 +82,7 @@ int main(int argc, char *argv[])
         {
             printf("\n"GREEN"Parabens, voce acertou!"RESET"\n");
             free_guesses(guesses, lenght);
+            fclose(inptr);
             return 0;
         }
         print_keyboard();
