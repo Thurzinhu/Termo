@@ -107,14 +107,26 @@ char *get_guess(int lenght)
     char *guess = malloc(lenght);
 
     // ensuring proper usage
+    int valid;
     do
     {
+        valid = 1;
         printf("Digite seu palpite: ");
         scanf("%s", guess);
         int last = strlen(guess);
         guess[last] = '\0';
+        
+        // all chars must be letters
+        for (int i = 0; i < last; i++)
+        {
+            if (!isalpha(guess[i]))
+            {
+                valid = 0;
+                break;
+            }
+        }
     }
-    while (strlen(guess) != lenght - 1);
+    while (strlen(guess) != lenght - 1 || valid == 0);
 
     // lowering all letters
     for (int i = 0; i < lenght - 1; i++)
