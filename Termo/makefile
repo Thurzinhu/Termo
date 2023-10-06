@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall
 
-IDIR = ../termo/include
-ODIR = ../termo/src
+IDIR = ../Termo/include
+ODIR = ../Termo/src
 OBJDIR = objects
 BINDIR = bin
 FDIR = files
