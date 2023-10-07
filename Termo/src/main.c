@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     if (!validateInput(argc, argv, &infile))
     {
         printf("ERROR\n");
+        return 1;
     }
 
     // setting seed
