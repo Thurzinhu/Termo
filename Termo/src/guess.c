@@ -17,7 +17,7 @@ char *getGuess()
         printf(BOLD_WHITE"Digite seu palpite: "RESET);
         scanf(" %s", guess);
 
-        valid = (validateGuess(guess)) ? 1 : 0;
+        valid = (validateGuess(guess));
 
         if (!valid)
         {
