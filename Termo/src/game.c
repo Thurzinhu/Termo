@@ -76,7 +76,7 @@ void updateStatus(char *answer, guess *cur_guess)
         }
         else
         {
-            for (int j = i + 1; j < MAX_LENGTH - 1; j++)
+            for (int j = 0; j < MAX_LENGTH - 1; j++)
             {
                 // letter in word but wrong position
                 if (answer[j] == cur_guess->word[i])
