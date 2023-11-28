@@ -2,6 +2,8 @@
 
 Implementação do jogo termo em C. Adivinhe a palavra de cinco letras em até seis tentativas para ganhar!
 
+https://github.com/Thurzinhu/Termo/assets/131901127/9b005112-8940-4001-a663-d25bda73fceb
+
 ## Modularização
 ### O jogo foi dividido em cinco módulos: 
 - O primeiro é responsável por validar o Input
